@@ -8,15 +8,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link href="styles/main.css" rel="preload" as="style" />
         <link href="styles/main.css" rel="stylesheet" type="text/css"/> 
-        <script src="/public/scripts/main.js" defer></script>
-        <script src="/public/socket.io/socket.io.js" type="module"></script>
-        <script src="/public/scripts/misc.js" type="module"></script>
-        <script src="/public/scripts/graphics.js" type="module" defer></script>
-        <!-- <script src="/public/scripts/webrtc.js" type="module"></script> -->
-        <script src="/public/scripts/videochat.js" type="module"></script>
-        <!-- <script src="/public/scripts/media.js" type="module"></script> -->
-        <script type="module" src="/public/scripts/shaders.js"></script>
-        <link rel="preload" as="video" href="../server/media/vid.mp4" crossorigin />
+        <script src="/public/scripts/main.js" defer></script>       
     </head>
     <body>
         <main class="flex justify-content-center flex-dir-col">
@@ -74,17 +66,7 @@
             <div class="pixel-color__ctn flex justify-content-center align-items-center">                
             </div>
         </div>
-        <label for="roomname">Enter room Name</label>
-        <input type="text" id="roomname" name="room"/>
-        <button id="submit-roomname">Send</button>
-        <video autoplay id="localvideo"></video>
-        <video autoplay id="remotevideo"></video>
-        <check-box></check-box>
-        
-        <!-- <video id="video" width="200" height="200" autoplay>
-            
-        </video> -->
-        <canvas id="mainCanvas" width="500" height="500"></canvas>
+       
     </body>
 </html>
 

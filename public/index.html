@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>chromaPro</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0 viewport-fit=cover" />
+        <meta name="description" content="An image processor which provides variety of image processing tools to enhance your images"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="styles/main.css" rel="preload" as="style" />
+        <link href="styles/main.css" rel="stylesheet" type="text/css"/> 
+        <script src="scripts/main.js" defer></script>       
+    </head>
+    <body>
+        <main class="flex justify-content-center flex-dir-col">
+            <form class="main-form">
+                <label tabindex="0" id="main-form__file-input-label" for="main-form__file-input">select image</label>
+                <input  type="file" id="main-form__file-input"/> 
+            </form>
+            <div class="img-res-info flex-dir-col flex align-items-center justify-content-center"></div>
+            <div class="canvas-ctn">
+                <canvas width="560" height="400" id="canvas"></canvas>
+                <div class="loading" aria-hidden="true">
+                    <div class="loading__indicator flex justify-content-space-around">
+                        <div class="loading__item"></div>
+                        <div class="loading__item"></div>
+                        <div class="loading__item"></div>
+                    </div>
+                    <div class="loading__txt"></div>
+                </div>
+            </div>
+            
+            <aside class="image-tools flex flex-dir-col">
+                <h2 class="image-tools__header">Tools</h2>
+                <div class="image-tools__input-ctn flex align-items-center">
+                    <input value="blur" aria-controls="canvas" name="filter" type="radio" id="image-tools-blur" class="image-tools__input" />
+                    <label class="image-tools__label" for="image-tools-blur">blur</label>                
+                </div>
+                <div class="image-tools__input-ctn flex align-items-center">                                 
+                    <input value="warm" aria-controls="canvas" name="filter" type="radio" id="image-tools-warm"  class="image-tools__input" />
+                    <label class="image-tools__label" for="image-tools-warm">warm</label>   
+                </div>
+                <div  class="image-tools__input-ctn flex align-items-center">
+                    <input value ="grayscale" aria-controls="canvas" type="radio" name="filter" id="image-tools-grayscale" class="image-tools__input" />
+                    <label class="image-tools__label" for="image-tools-grayscale">black and white</label>     
+                </div>
+                <div class="image-tools__input-ctn flex align-items-center">
+                    <input value="sharpen" aria-controls="canvas" name="filter" type="radio" id="image-tools-sharpen" class="image-tools__input" />
+                    <label class="image-tools__label" for="image-tools-sharpen">sharpen image</label>   
+                </div>
+                <div class="image-tools__input-ctn flex align-items-center">
+                    <input value="original" aria-controls="canvas" name="filter" type="radio" id="image-tools-original" class="image-tools__input"/>
+                    <label class="image-tools__label" for="image-tools-original">original</label>   
+                </div>
+                <div class="image-tools__input-ctn flex align-items-center">
+                    <input value="invert" aria-controls="canvas" name="filter" type="radio" id="image-tools-invert" class="image-tools__input"/>
+                    <label class="image-tools__label" for="image-tools-invert">invert</label>   
+                </div>
+                                
+            </aside>
+            <a class="download-img" id="download-content" download>
+                <button class="download-img__btn" disabled>Download image</button>
+            </a>
+        </main>        
+        <div class="pixel-color">
+            <h3>pixel color</h3>
+            <div class="pixel-color__ctn flex justify-content-center align-items-center">                
+            </div>
+        </div>
+       
+    </body>
+</html>
+
